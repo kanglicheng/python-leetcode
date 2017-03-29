@@ -14,3 +14,8 @@ class Solution(object):
             for j in range(1, n):
                 grid[i][j] += min(grid[i-1][j], grid[i][j-1])
         return grid[-1][-1] #the top left element contains the solution
+
+    
+    
+    
+    
