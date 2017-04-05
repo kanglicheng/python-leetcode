@@ -1,6 +1,6 @@
 class Solution(object):
     def minDistance(self, word1, word2):
-        l 1= len(word1) + 1
+        l1= len(word1) + 1
         l2 = len(word2) + 1
         
         dp = [[0 for b in xrange(l2)] for c in xrange(l1)]
