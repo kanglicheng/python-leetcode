@@ -22,3 +22,5 @@ class Solution(object):
                 high = mid
             mid = (low+high)/2
         return mid
+
+    # This solution uses binary search, and I am thinking if Newton's method would work?
