@@ -20,3 +20,5 @@ class Solution(object):
             return 0
         else:
             return x_reversed_int
+
+        # This solution is not optimal. Try to think of another one.
