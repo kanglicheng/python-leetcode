@@ -14,3 +14,4 @@ class Solution(object):
             rev = rev*10 + x%10
             x = x/10
         return (x==rev or x==rev/10)
+# what's wrong with the if condition?
