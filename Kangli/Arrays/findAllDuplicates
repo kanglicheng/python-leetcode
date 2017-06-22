@@ -3,6 +3,23 @@ Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements 
 Find all the elements that appear twice in this array.
 Could you do it without extra space and in O(n) runtime?
 """
+#O(1) extra space and O(n) time. Exploit the fact that the elements of nums all correspond to positions within nums and
+# find duplicates by marking visited indices.
+class Solution(object):
+    def findDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        res =[]
+        for n in nums:
+            ind = abs(n) -1 
+            if nums[ind] < 0:
+                res.append(abs(n))
+            else:
+                nums[ind] *= -1
+        return res
+
 #accepted, first solution that came to mind but uses extra space
 class Solution(object):
     def findDuplicates(self, nums):
