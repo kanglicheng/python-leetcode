@@ -1,3 +1,6 @@
+# lc problem 69
+# Compute and return the square root of x.
+
 class Solution(object):
     def mySqrt(self, x):
         """
@@ -13,10 +16,11 @@ class Solution(object):
         while (low!=high-1):
             if (mid**2 < x):
                 low = mid
-                #mid = (low+high)/2
             elif (mid**2 == x):
                 return mid
             elif (mid**2 >x):
                 high = mid
             mid = (low+high)/2
         return mid
+
+    # This solution uses binary search, and I am thinking if Newton's method would work?
