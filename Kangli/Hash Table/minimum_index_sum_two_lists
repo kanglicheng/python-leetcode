@@ -1,0 +1,20 @@
+class Solution(object):
+    def findRestaurant(self, list1, list2):
+        result={}
+        out=[]
+        andy_dict = dict(zip(list1,range(len(list1))))
+        
+        for i,v in enumerate(list2):
+            if v in andy_dict:
+                result.update({v:i+andy_dict[v]})
+                
+        minIndex =len(list2) + len(list1)
+        
+        for k in result.keys():
+            if result[k] < minIndex:
+                minIndex= result[k]
+        
+        for k in result.keys():
+            if result[k] == minIndex:
+                out.append(k)
+        return out
