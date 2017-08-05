@@ -1,4 +1,9 @@
 """
+
+"""
+
+
+"""
 Buy and sell one share of stock, given the array of prices. Cannot 
 short stock, (have to buy before selling). Return the max profit possible.
 """
@@ -10,7 +15,7 @@ def maxProfit(prices):
 			maxProfit = max(maxProfit, prices[j]-prices[i])
 	return maxProfit
 
-
+print("brute force "+str( maxProfit([20, 1, 9, 2, 10])))
 #One pass approach
 
 def maxProfit1(prices):
