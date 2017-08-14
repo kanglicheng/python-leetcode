@@ -1,12 +1,47 @@
 """
+solutions to problems in EPI
+"""
 
+"""
+8/14/17
+Find the number of ways to make change
 """
 
 
 """
+8/14/17
+Giving an amount of change and a list of available denominations coins, find the minimum
+number of coins required to make c.
+"""
+def makeChange(change, coins):
+
+	memo=[0]+[1000] * (change)
+	
+	for c in coins:
+	    for amount in range(c, change+1):
+	        memo[amount]= min(memo[amount-c]+1, memo[amount])
+	return memo[-1]
+
+print(makeChange(25, [1, 2, 5, 10]))
+
+
+def makeChange1(change, coins):
+
+	memo = [0] + [1000] * (change)
+	for amount in range(change+1):
+		for c in coins:
+			if c <= amount and memo[amount-c] +1 < memo[amount]:
+				memo[amount]= memo[amount-c]+1
+	return memo[-1]
+
+print(makeChange1(25, [1, 2, 5, 10]))
+	
+"""
+8/4/17
 Buy and sell one share of stock, given the array of prices. Cannot 
-short stock, (have to buy before selling). Return the max profit possible.
+short stock, (have to buy before selling). Return the max profit possible. 
 """
+
 # Brute force, use two nested loops, find max from every possible transaction.
 def maxProfit(prices):
 	maxProfit =0
@@ -29,4 +64,5 @@ def maxProfit1(prices):
 	return maxProfit	
 
 print(maxProfit1([20, 1, 9, 2, 10]))
+
 
