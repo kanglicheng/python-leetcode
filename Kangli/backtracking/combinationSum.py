@@ -1,3 +1,5 @@
+# Generate all subsets that sum to target using elements from candidates. Each number in 
+# candidates can be used an unlimited number of times
 class Solution(object):
     def combinationSum(self, candidates, target):
         self.res = []
@@ -14,4 +16,5 @@ class Solution(object):
                 temp.pop()
         dfs(candidates, target, [], 0)
         return self.res
+        
         
