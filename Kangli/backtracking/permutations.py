@@ -1,3 +1,4 @@
+#10/17/17 Tuesday
 #Given a collection of distinct numbers, return all possible permutations.
 #recursive solution
 class Solution(object):
