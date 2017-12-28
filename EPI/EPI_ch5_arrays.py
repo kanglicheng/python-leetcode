@@ -46,4 +46,8 @@ def partition_opt(arr, i):
 
 print partition_opt([4, 5, 2, -1, 0, 2, 1], 2)
 
+"""
+Write a program which takes an array of digits representing a number N
+and update the array to represent N+1.
+"""
 
