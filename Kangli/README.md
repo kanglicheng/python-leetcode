@@ -29,6 +29,7 @@ if count > 1. Return the length of new array at the end.
 [Submission](https://github.com/kanglicheng/python-leetcode/blob/mySolutions/Kangli/Strings/stringCompression.py)
 
 10/27/17
+
 **219: Contains Duplicate II-** Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
 Thoughts:
 Use a dictionary to store each integer and its index in nums as key, value pairs. 
@@ -50,6 +51,7 @@ Thoughts: Using a dictionary (hash), insert each sorted string into the dictiona
 [Submission](https://github.com/kanglicheng/python-leetcode/blob/mySolutions/Kangli/Hash%20Table/group_anagrams.py)
 
 11/7/17
+
 **206: Reverse Linked List**
 Have access to the head of the linked list. Want to reverse the pointers and make the original head point to null (end of list). 
 1) Recursively, we begin with the base case of returning head if head is null or head.next is null.
