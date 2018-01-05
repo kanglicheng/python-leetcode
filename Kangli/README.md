@@ -2,6 +2,7 @@
 Keeping a record of thoughts behind solving certain problems
 
 1/4/18 Making some catch-up edits.
+
 **189: Rotate Array-**
 Rotate an array of n elements to the right by k steps.
 For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
@@ -11,10 +12,9 @@ Try to come up as many solutions as you can, there are at least 3 different ways
 Hint: Related problem: Reverse Words in a String II. An "easy" problem but with a low acceptance rate, only 25%, wonder why.
 
 *Thoughts: Really struggled with the constraint of doing it in place. So tried solving it with extra space first. 
-Just append the elements in the correct positions in the new results array. But coming up with the correct positions requires thinking about two conditions. As we iterate through the input nums, we simply put put nums[i] at res[i+k] if i+k is a valid index (i + k < len(nums) ). But if i + k exceeds len(nums), what to do? Also k can be any positive number, meaning it could be several times len(nums). I worked out a few examples arr = [1, 2, 3], k=1, k= 2, k = 5 etc. Then I found the pattern that the correct position corresponds to (i + k) % len(nums), for any i and k. This is also correct mathematically because we are really looking for the number (i + k) that "wraps around" len(nums), which is exactly what modulo arithmetic can be used for.
+Just append the elements in the correct positions in the new results array. But coming up with the correct positions requires thinking about two conditions. As we iterate through the input nums, we simply put put nums[i] at res[i+k] if i+k is a valid index (i + k < len(nums) ). But if i + k exceeds len(nums), what to do? Also k can be any positive number, meaning it could be several times len(nums). I worked out a few examples arr = [1, 2, 3], k=1, k= 2, k = 5 etc. Then I found the pattern that the correct position corresponds to (i + k) % len(nums), for any i and k. This is also correct mathematically because we are really looking for the number (i + k) that "wraps around" len(nums), which is exactly what modulo arithmetic can be used for.*
 
-I later looked up an in-place solution that pops the last item of the array and inserts it to the beginning, repeating for k % len(nums) times. 
-* 
+*I later looked up an in-place solution that pops the last item of the array and inserts it to the beginning, repeating for k % len(nums) times. * 
 [Submission](https://github.com/kanglicheng/python-leetcode/blob/mySolutions/Kangli/Arrays/rotateArray.py)
 
 
