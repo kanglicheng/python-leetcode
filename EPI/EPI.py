@@ -1,6 +1,8 @@
 """
 solutions to problems in EPI
 """
+
+
 #naive recursion
 def cc(n, denoms):
 	minCoins =100
@@ -34,7 +36,7 @@ def greedyCC(n, denoms):
 Find the number of ways to make change, given an amount change and 
 an array of denominations, coins.
 http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/
-
+"""
 def numberWaysMakeChange(change, coins):
     # We need n+1 rows as the table is consturcted in bottom up
     # manner using the base case 0 value case (n = 0)
@@ -57,14 +59,14 @@ def numberWaysMakeChange(change, coins):
             memo[i][j] = x + y
  
     return memo[-1][-1]
-print(numberWaysMakeChange(10, [1, 5, 10, 25]))
-"""
+#print(numberWaysMakeChange(10, [1, 5, 10, 25]))
+
 """
 8/14/17
 Giving an amount of change and a list of available denominations, coins, find the minimum
 number of coins required to make c. makeChange is the optimized version of 
 makeChange1, my original solution
-
+"""
 def makeChange(change, coins):
 
 	memo=[0]+[1000] * (change)
@@ -74,7 +76,7 @@ def makeChange(change, coins):
 	        memo[amount]= min(memo[amount-c]+1, memo[amount])
 	return memo[-1]
 
-print(makeChange(25, [1, 2, 5, 10]))
+#print(makeChange(25, [1, 2, 5, 10]))
 
 
 def makeChange1(change, coins):
@@ -86,13 +88,13 @@ def makeChange1(change, coins):
 				memo[amount]= memo[amount-c]+1
 	return memo[-1]
 
-print(makeChange1(25, [1, 2, 5, 10]))
-"""	
+#print(makeChange1(25, [1, 2, 5, 10]))
+
 """
 8/4/17
 Buy and sell one share of stock, given the array of prices. Cannot 
 short stock, (have to buy before selling). Return the max profit possible. 
-
+"""
 
 # Brute force, use two nested loops, find max from every possible transaction.
 def maxProfit(prices):
@@ -115,6 +117,6 @@ def maxProfit1(prices):
 		maxProfit= max(maxProfit, prices[i]-lowestSoFar)
 	return maxProfit	
 
-print(maxProfit1([20, 1, 9, 2, 10]))
-""" 
+#print(maxProfit1([20, 1, 9, 2, 10]))
+
 
