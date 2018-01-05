@@ -14,7 +14,7 @@ Hint: Related problem: Reverse Words in a String II. An "easy" problem but with 
 *Thoughts: Really struggled with the constraint of doing it in place. So tried solving it with extra space first. 
 Just append the elements in the correct positions in the new results array. But coming up with the correct positions requires thinking about two conditions. As we iterate through the input nums, we simply put put nums[i] at res[i+k] if i+k is a valid index (i + k < len(nums) ). But if i + k exceeds len(nums), what to do? Also k can be any positive number, meaning it could be several times len(nums). I worked out a few examples arr = [1, 2, 3], k=1, k= 2, k = 5 etc. Then I found the pattern that the correct position corresponds to (i + k) % len(nums), for any i and k. This is also correct mathematically because we are really looking for the number (i + k) that "wraps around" len(nums), which is exactly what modulo arithmetic can be used for.*
 
-*I later looked up an in-place solution that pops the last item of the array and inserts it to the beginning, repeating for k % len(nums) times. * 
+*I later looked up an in-place solution that pops the last item of the array and inserts it to the beginning, repeating for k % len(nums) times.* 
 [Submission](https://github.com/kanglicheng/python-leetcode/blob/mySolutions/Kangli/Arrays/rotateArray.py)
 
 
@@ -41,7 +41,7 @@ Explanation:
 "aa" is replaced by "a2". "bb" is replaced by "b2". "ccc" is replaced by "c3".
 
 *Thoughts: Easy if not doing it in place. I made an extra array, added the character and added its count
-if count > 1. Return the length of new array at the end. *
+if count > 1. Return the length of new array at the end.*
 [Submission](https://github.com/kanglicheng/python-leetcode/blob/mySolutions/Kangli/Strings/stringCompression.py)
 
 10/27/17
@@ -63,7 +63,7 @@ Return:
   ["nat","tan"],
   ["bat"]
 ]
-*Thoughts: Using a dictionary (hash), insert each sorted string into the dictionary as keys, using the original string as the value. Need the values to be an array, so initialize the value of each key as [] and add the original string directly to [] each time. Could also use defaultdict (python specific). *
+*Thoughts: Using a dictionary (hash), insert each sorted string into the dictionary as keys, using the original string as the value. Need the values to be an array, so initialize the value of each key as [] and add the original string directly to [] each time. Could also use defaultdict (python specific).*
 [Submission](https://github.com/kanglicheng/python-leetcode/blob/mySolutions/Kangli/Hash%20Table/group_anagrams.py)
 
 11/7/17
