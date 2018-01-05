@@ -24,7 +24,8 @@ Return 6, and the first 6 characters of the input array should be: ["a","2","b",
 Explanation:
 "aa" is replaced by "a2". "bb" is replaced by "b2". "ccc" is replaced by "c3".
 
-Thoughts: Easy if not doing it in place. I made an extra array, added the character and added its count if count > 1. 
+Thoughts: Easy if not doing it in place. I made an extra array, added the character and added its count
+if count > 1. Return the length of new array at the end. 
 [Submission](https://github.com/kanglicheng/python-leetcode/blob/mySolutions/Kangli/Strings/stringCompression.py)
 
 10/27/17
