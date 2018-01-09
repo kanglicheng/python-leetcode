@@ -1,10 +1,10 @@
-### How I Practice ###
+## How I Practice ##
 Keeping a record of thoughts behind solving certain problems
 
 1/8/18
-* Dynamic Programming Tasks (DP) * 
+###Dynamic Programming Tasks (DP)###
 
-**442: Find All Duplicates in an Array- **
+**442: Find All Duplicates in an Array-**
 
 Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 Find all the elements that appear twice in this array. Could you do it without extra space and in O(n) runtime?
