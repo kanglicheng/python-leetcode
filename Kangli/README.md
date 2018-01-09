@@ -2,7 +2,8 @@
 Keeping a record of thoughts behind solving certain problems
 
 1/8/18
-###Dynamic Programming Tasks (DP)###
+
+### Dynamic Programming Tasks (DP)###
 
 **442: Find All Duplicates in an Array-**
 
