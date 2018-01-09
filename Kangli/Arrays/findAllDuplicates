@@ -5,6 +5,17 @@ Could you do it without extra space and in O(n) runtime?
 """
 #O(1) extra space and O(n) time. Exploit the fact that the elements of nums all correspond to positions within nums and
 # find duplicates by marking visited indices.
+#1/8/18, reviewed this problem, same solution using same "trick"
+class Solution(object):
+    def findDuplicates(self, nums):
+        res = []
+        for n in nums:
+            if nums[abs(n)-1] < 0:
+                res.append(abs(n))
+            else:
+                nums[abs(n)-1 ] = -nums[abs(n)-1]
+        return res
+        
 class Solution(object):
     def findDuplicates(self, nums):
         """
