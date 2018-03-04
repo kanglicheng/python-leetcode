@@ -1,3 +1,19 @@
+#clean dp solution
+class Solution(object):
+    def longestPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        max_len, res = 0, ""
+        dp = [[False for x in range(len(s))] for y in range(len(s))]
+        for i in range(len(s)-1, -1, -1):
+            for j in range(i, len(s)):
+                dp[i][j] = s[i] == s[j] and (j-i < 3 or dp[i+1][j-1])
+                if dp[i][j] and j-i+1 > len(res):
+                    res = s[i:j+1]
+        return res
+       
 class Solution(object):
     def longestPalindrome(self, s):
         st = 0
