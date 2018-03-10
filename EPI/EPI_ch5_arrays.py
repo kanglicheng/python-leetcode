@@ -51,3 +51,7 @@ Write a program which takes an array of digits representing a number N
 and update the array to represent N+1.
 """
 
+
+def knapsack(items, weights, W):
+	
+
