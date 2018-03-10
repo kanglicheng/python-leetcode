@@ -1,5 +1,23 @@
-### How I Practice ###
+## How I Practice ##
 Keeping a record of thoughts behind solving certain problems
+
+1/8/18
+
+### Dynamic Programming Tasks (DP) ###
+
+**442: Find All Duplicates in an Array-**
+
+Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements that appear twice in this array. Could you do it without extra space and in O(n) runtime?
+
+Example:
+Input:
+[4,3,2,7,8,2,3,1]
+Output:
+[2,3]
+
+Thoughts: Clearly the challenge is in the additional requirement to do this task with O(1) space and O(n) time. Otherwise, make a hash of array element frequencies and return all keys with frequency == 2. There is a trick that we can utilize, which is noticing that each element can be converted to a position of in the array, since the elements are guaranteed to be
+1 <= nums[i] < = n. So we mark each visited position nums[elt] by changing the value at that position nums[elt]to be negative. If the position already contains a negative, add elt to the output array. However, we will also need to access each position by nums[abs(elt)] since some elements have already been converted to negatives, rendering the value meaningless as a position. [Submission](https://github.com/kanglicheng/python-leetcode/blob/mySolutions/Kangli/Arrays/findAllDuplicates)
 
 1/4/18 Making some catch-up edits.
 
