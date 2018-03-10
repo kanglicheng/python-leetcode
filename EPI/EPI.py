@@ -2,7 +2,6 @@
 solutions to problems in EPI
 """
 
-
 #naive recursion
 def cc(n, denoms):
 	minCoins =100
@@ -16,19 +15,12 @@ def cc(n, denoms):
 			#globalMin= minCoins
 	return globalMin
 
-print(cc(5, [1, 5, 10, 25]))
-print(cc(33, [1, 5, 10, 25]))
+# print(cc(5, [1, 5, 10, 25]))
+# print(cc(33, [1, 5, 10, 25]))
 
 # greedy algorithm, always pick the largest possible coin, subtract from n
 def greedyCC(n, denoms):
-	prev =0
-	count =0
-	while n != 0:
-		n -= max(denoms) if max(denoms)<n 
-		count +=1 
-	return count
-
-
+    pass 
 
 
 """
