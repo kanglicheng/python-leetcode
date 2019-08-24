@@ -1,0 +1,15 @@
+Hello!
+Are you?
+-No
+Some other
+1:We're happy
+Would you
+-Not right now
+=Okay
+-Yes, please upgrade
+=Okay, upgraded!
+-Yes
+>1 
+---
+Yes
+Yes, please upgrade
