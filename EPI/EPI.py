@@ -2,6 +2,10 @@
 solutions to problems in EPI
 """
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7488e4d602261a8615cebaf51ea6ebaac4ccb207
 #naive recursion
 def cc(n, denoms):
 	minCoins =100

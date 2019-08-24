@@ -50,8 +50,11 @@ print partition_opt([4, 5, 2, -1, 0, 2, 1], 2)
 Write a program which takes an array of digits representing a number N
 and update the array to represent N+1.
 """
+<<<<<<< HEAD
 
 
 def knapsack(items, weights, W):
 	
+=======
+>>>>>>> 7488e4d602261a8615cebaf51ea6ebaac4ccb207
 
