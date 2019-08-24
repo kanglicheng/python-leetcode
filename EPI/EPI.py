@@ -3,6 +3,10 @@ solutions to problems in EPI
 """
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7488e4d602261a8615cebaf51ea6ebaac4ccb207
 =======
 
 >>>>>>> 7488e4d602261a8615cebaf51ea6ebaac4ccb207
@@ -19,12 +23,28 @@ def cc(n, denoms):
 			#globalMin= minCoins
 	return globalMin
 
+<<<<<<< HEAD
 # print(cc(5, [1, 5, 10, 25]))
 # print(cc(33, [1, 5, 10, 25]))
 
 # greedy algorithm, always pick the largest possible coin, subtract from n
 def greedyCC(n, denoms):
     pass 
+=======
+print(cc(5, [1, 5, 10, 25]))
+print(cc(33, [1, 5, 10, 25]))
+
+# greedy algorithm, always pick the largest possible coin, subtract from n
+def greedyCC(n, denoms):
+	prev =0
+	count =0
+	while n != 0:
+		n -= max(denoms) if max(denoms)<n 
+		count +=1 
+	return count
+
+
+>>>>>>> 7488e4d602261a8615cebaf51ea6ebaac4ccb207
 
 
 """
